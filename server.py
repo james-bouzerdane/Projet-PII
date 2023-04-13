@@ -7,6 +7,8 @@ if __name__ == "__main__":
                 '/test.html': 'test.html',
                 '/tony.html': 'tony.html'}
 else:
+    print("Please select the text file containing the json dictionary that consists of:\n"
+          "The url (key) and the full path of the corresponding HTML file (value)")
     file_dict = askopenfilename()
     import json
     with open(file_dict, 'r') as f:
@@ -28,7 +30,7 @@ while True:
         try:
             file_name = dict_url[request_url]
         except KeyError:
-            file_name = r'/server/404.html'
+            file_name = '404.html'
         with open(file_name, 'r') as file:
             file_content = file.read()
             if file_name == '404.html':
