@@ -7,8 +7,8 @@ if __name__ == "__main__":
                 '/test.html': 'test.html',
                 '/tony.html': 'tony.html'}
 else: # Let the user select the dictionary (the pages that the webserver will show depending of the url)
-    print("Please select the text file containing the json dictionary that consists of:\n"
-          "The url (key) and the full path of the corresponding HTML file (value)")
+    print("Please select the json file containing the dictionary that consists of:\n"
+          "The url (key) and the path of the corresponding HTML file (value)")
     file_dict = askopenfilename()
     import json
     with open(file_dict, 'r') as f:
